@@ -28,7 +28,7 @@
 
 | # | Nombre | Entidad | Enlace | Cardinalidad |
 |---|--------|---------|--------|---------------|
-| 1 | Avatar | `Attachment` | `User.id` → `Attachment.user_id` | `1` → `0..1` |
-| 2 | Contactos | `Contact` | `User.id` → `Contact.user_id` | `1` → `N` |
-| 3 | Productos | `Product` | `User.id` → `Product.user_id` | `1` → `N` |
+| 1 | Avatar | [`Archivo adjunto`](../Attachment/Attachment.md) | [`Attachment.owner_type_val`](../Attachment/Attachment.md) = [`AttachmentOwnerTypeEnum.USER`](../Attachment/OwnerTypeEnum.md) <br> [`Attachment.owner_id`](../Attachment/Attachment.md) → `User.id` | `1` → `0..1` |
+| 2 | Contactos | `Contacto` | `User.id` → `Contact.user_id` | `1` → `N` |
+| 3 | Productos | `Producto` | `User.id` → `Product.user_id` | `1` → `N` |
 
