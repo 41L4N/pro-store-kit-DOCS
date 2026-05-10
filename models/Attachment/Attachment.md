@@ -1,4 +1,4 @@
-# Adjunto (Attachment)
+# Archivo adjunto (Attachment)
 
 ## 📋 Campos
 

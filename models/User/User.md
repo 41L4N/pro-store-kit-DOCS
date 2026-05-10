@@ -30,5 +30,5 @@
 |---|--------|---------|--------|---------------|
 | 1 | Avatar | [`Archivo adjunto`](../Attachment/Attachment.md) | [`Attachment.owner_type_val`](../Attachment/Attachment.md) = [`AttachmentOwnerTypeEnum.USER`](../Attachment/OwnerTypeEnum.md) <br> [`Attachment.owner_id`](../Attachment/Attachment.md) → `User.id` | `1` → `0..1` |
 | 2 | Contactos | [`Contacto`](../Contact/Contact.md) | `User.id` → [`Contact.user_id`](../Contact/Contact.md) | `1` → `0..2` |
-| 3 | Productos | `Producto` | `User.id` → `Product.user_id` | `1` → `N` |
+| 3 | Productos | [`Producto`](../Product/Product.md) | `User.id` → [`Product.user_id`](../Product/Product.md) | `1` → `0..N` |
 

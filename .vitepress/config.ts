@@ -76,6 +76,13 @@ export default defineConfig({
 						],
 					},
 					{
+						text: 'Producto',
+						collapsed: false,
+						items: [
+							{ text: 'Producto', link: '/models/Product/Product' },
+						],
+					},
+					{
 						text: 'Adjunto',
 						collapsed: false,
 						items: [
