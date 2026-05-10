@@ -14,6 +14,9 @@
 | 8 | Fecha de creación | `created_at` | Requerido.<br>Momento (fecha/hora). |
 | 9 | Fecha de actualización | `updated_at` | Requerido.<br>Momento (fecha/hora). |
 | 10 | Fecha de eliminación | `deleted_at` | Momento (fecha/hora). |
+| 11 | Avatar | `avatar` | Modelo: [`Adjunto`](../Attachment/Attachment.md).<br>Cardinalidad: `1` → `0..1`<br>Enlace:<br>(`User.id` = [`Attachment.owner_id`](../Attachment/Attachment.md))<br>& ([`Attachment.owner_type_val`](../Attachment/Attachment.md) = [`OwnerTypeEnum.USER`](../Attachment/OwnerTypeEnum.md))<br>& ([`Attachment.type_val`](../Attachment/Attachment.md) = [`TypeEnum.AVATAR`](../Attachment/TypeEnum.md)). |
+| 12 | Contactos | `contacts` | Modelo: [`Contacto`](../Contact/Contact.md).<br>Cardinalidad: `1` → `0..2`<br>Enlace:<br>(`User.id` = [`Contact.user_id`](../Contact/Contact.md)). |
+| 13 | Productos | `products` | Modelo: [`Producto`](../Product/Product.md).<br>Cardinalidad: `1` → `0..N`<br>Enlace:<br>(`User.id` = [`Product.user_id`](../Product/Product.md)). |
 
 ## ⚡ Acciones
 
@@ -23,12 +26,3 @@
 | 2 | Actualizar | `update` | `User.update` | `PUT` | `/users/{id}` | `email`, `name`, `last_name`, `phone`, `status_val` |
 | 3 | Leer | `read` | `User.read` | `GET` | `/users/{id}` | `id`, `email`, `name`, `last_name`, `phone`, `status_val`, `status`, `created_at`, `updated_at`, `deleted_at` |
 | 4 | Eliminar | `delete` | `User.delete` | `DELETE` | `/users/{id}` | — |
-
-## 🔗 Relaciones
-
-| # | Nombre | Entidad | Enlace | Cardinalidad |
-|---|--------|---------|--------|---------------|
-| 1 | Avatar | [`Archivo adjunto`](../Attachment/Attachment.md) | [`Attachment.owner_type_val`](../Attachment/Attachment.md) = [`AttachmentOwnerTypeEnum.USER`](../Attachment/OwnerTypeEnum.md) <br> [`Attachment.owner_id`](../Attachment/Attachment.md) → `User.id` | `1` → `0..1` |
-| 2 | Contactos | [`Contacto`](../Contact/Contact.md) | `User.id` → [`Contact.user_id`](../Contact/Contact.md) | `1` → `0..2` |
-| 3 | Productos | [`Producto`](../Product/Product.md) | `User.id` → [`Product.user_id`](../Product/Product.md) | `1` → `0..N` |
-
