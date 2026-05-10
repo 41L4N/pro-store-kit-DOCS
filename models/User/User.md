@@ -1,14 +1,16 @@
 # Usuario (User)
 
+## Campos
+
 | # | Etiqueta | Campo | Reglas |
 |---|----------|-------|--------|
 | 1 | ID | `id` | Requerido. |
-| 2 | Correo electrónico | `email` | Requerido.<br>Formato email válido.<br>Longitud (3-254).<br>Único. |
-| 3 | Nombre | `name` | Requerido.<br>Texto.<br>Longitud (1-100). |
-| 4 | Apellido | `last_name` | Requerido.<br>Texto.<br>Longitud (1-100). |
-| 5 | Teléfono | `phone` | Requerido.<br>Texto.<br>Longitud (6-32).<br>Único. |
-| 6 | Estado | `status` | Requerido.<br>Enum: [`StatusEnum`](./StatusEnum.md). |
-| 7 | Estado | `status_val` | Requerido.<br>Enum: [`StatusEnum.value`](./StatusEnum.md). |
+| 2 | Correo electrónico | `email` | Requerido.<br>Formato email válido.<br>Longitud: 3-254.<br>Único. |
+| 3 | Nombre | `name` | Requerido.<br>Texto.<br>Longitud: 1-100. |
+| 4 | Apellido | `last_name` | Requerido.<br>Texto.<br>Longitud: 1-100. |
+| 5 | Teléfono | `phone` | Requerido.<br>Texto.<br>Longitud: 6-32.<br>Único. |
+| 6 | Estado | `status_val` | Requerido.<br>Enum: [`StatusEnum.value`](./StatusEnum.md). |
+| 7 | Estado | `status` | Requerido.<br>Enum: [`StatusEnum`](./StatusEnum.md). |
 | 8 | Fecha de creación | `created_at` | Requerido.<br>Momento (fecha/hora). |
 | 9 | Fecha de actualización | `updated_at` | Requerido.<br>Momento (fecha/hora). |
 | 10 | Fecha de eliminación | `deleted_at` | Momento (fecha/hora). |
