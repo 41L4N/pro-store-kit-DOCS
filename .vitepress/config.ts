@@ -58,12 +58,13 @@ export default defineConfig({
 
 				sidebar: [
 					{ text: 'Inicio', link: '/' },
+					{ text: 'Formatos', link: '/Formats' },
 					{
 						text: 'Usuario',
 						collapsed: false,
 						items: [
 							{ text: 'Usuario', link: '/models/User/User' },
-							{ text: 'Estado', link: '/models/User/StatusEnum' },
+							{ text: 'Estado (Enum)', link: '/models/User/StatusEnum' },
 						],
 					},
 					{
@@ -71,7 +72,7 @@ export default defineConfig({
 						collapsed: false,
 						items: [
 							{ text: 'Contacto', link: '/models/Contact/Contact' },
-							{ text: 'Tipo', link: '/models/Contact/TypeEnum' },
+							{ text: 'Tipo (Enum)', link: '/models/Contact/TypeEnum' },
 						],
 					},
 					{
@@ -80,10 +81,10 @@ export default defineConfig({
 						items: [
 							{ text: 'Adjunto', link: '/models/Attachment/Attachment' },
 							{
-								text: 'Tipo de dueño',
+								text: 'Tipo de dueño (Enum)',
 								link: '/models/Attachment/OwnerTypeEnum',
 							},
-							{ text: 'Tipo', link: '/models/Attachment/TypeEnum' },
+							{ text: 'Tipo (Enum)', link: '/models/Attachment/TypeEnum' },
 						],
 					},
 				],
