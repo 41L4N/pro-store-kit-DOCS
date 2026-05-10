@@ -6,11 +6,11 @@
 
 Es un ecosistema de componentes y vistas concebido como una base de alto nivel para aplicaciones empresariales con **identidad corporativa sólida** y gestión de datos compleja. Su arquitectura de componentes desacoplados permite una integración segura con cualquier API, mantiene una estética limpia y profesional, y reduce el tiempo de salida al mercado con una base preconfigurada que cumple altos estándares de seguridad y usabilidad.
 
-## Propósito
+## 🎯 Propósito
 
 **Descripción funcional y de dominio** de Pro Store Kit: *qué* hace el producto y cómo se comporta, **sin atarse a stacks concretos**. El código vive en FRONT y BACK; aquí vive el criterio compartido (reglas, alcance, modelo de negocio) que esos repos deben respetar. Cuando cambie el producto o el dominio, conviene **documentarlo primero aquí** para que la implementación siga una sola línea.
 
-## Qué irá encontrando en este repositorio
+## 📚 Qué irá encontrando en este repositorio
 
 El contenido se irá ampliando de forma incremental. Entre lo previsto:
 
@@ -19,7 +19,7 @@ El contenido se irá ampliando de forma incremental. Entre lo previsto:
 - **Módulos** del producto y su alcance funcional.
 - **Comportamientos** acordados: reglas, excepciones, casos límite y criterios de consistencia.
 
-## Para quién es esta documentación
+## 👥 Para quién es esta documentación
 
 Referencia por rol:
 
@@ -32,7 +32,7 @@ Referencia por rol:
 
 ---
 
-## Colaboradores
+## 🤝 Colaboradores
 
 [![Contribuidores del proyecto](https://contrib.rocks/image?repo=41L4N/pro-store-kit-DOCS)](https://github.com/41L4N/pro-store-kit-DOCS/graphs/contributors)
 
