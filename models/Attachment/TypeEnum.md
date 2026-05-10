@@ -3,7 +3,6 @@
 | # | Caso | Valor | Etiqueta |
 |---|------|-------|----------|
 | 1 | AVATAR | 1 | Avatar |
-| 2 | DOCUMENT | 2 | Documento |
-| 3 | VIDEO | 4 | Video |
-| 4 | IMAGE | 5 | Imagen |
-| 5 | PDF | 6 | PDF |
+| 2 | VIDEO | 4 | Video |
+| 3 | IMAGE | 5 | Imagen |
+| 4 | PDF | 6 | PDF |
