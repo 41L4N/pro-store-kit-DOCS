@@ -62,20 +62,20 @@ export default defineConfig({
 						text: 'Usuario',
 						collapsed: false,
 						items: [
-							{ text: 'User', link: '/models/User/User' },
-							{ text: 'StatusEnum', link: '/models/User/StatusEnum' },
+							{ text: 'Usuario', link: '/models/User/User' },
+							{ text: 'Estado', link: '/models/User/StatusEnum' },
 						],
 					},
 					{
 						text: 'Adjunto',
 						collapsed: false,
 						items: [
-							{ text: 'Attachment', link: '/models/Attachment/Attachment' },
+							{ text: 'Adjunto', link: '/models/Attachment/Attachment' },
 							{
-								text: 'OwnerTypeEnum',
+								text: 'Tipo de dueño',
 								link: '/models/Attachment/OwnerTypeEnum',
 							},
-							{ text: 'TypeEnum', link: '/models/Attachment/TypeEnum' },
+							{ text: 'Tipo', link: '/models/Attachment/TypeEnum' },
 						],
 					},
 				],
