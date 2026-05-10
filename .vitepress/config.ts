@@ -67,6 +67,14 @@ export default defineConfig({
 						],
 					},
 					{
+						text: 'Contacto',
+						collapsed: false,
+						items: [
+							{ text: 'Contacto', link: '/models/Contact/Contact' },
+							{ text: 'Tipo', link: '/models/Contact/TypeEnum' },
+						],
+					},
+					{
 						text: 'Adjunto',
 						collapsed: false,
 						items: [
