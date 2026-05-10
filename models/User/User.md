@@ -1,6 +1,6 @@
 # Usuario (User)
 
-## Campos
+## 📋 Campos
 
 | # | Etiqueta | Campo | Reglas |
 |---|----------|-------|--------|
@@ -15,7 +15,7 @@
 | 9 | Fecha de actualización | `updated_at` | Requerido.<br>Momento (fecha/hora). |
 | 10 | Fecha de eliminación | `deleted_at` | Momento (fecha/hora). |
 
-## Acciones
+## ⚡ Acciones
 
 | # | Nombre | Acción | Permiso | Método | Ruta | DTO |
 |---|--------|--------|---------|--------|------|-----|
@@ -24,7 +24,7 @@
 | 3 | Leer | `read` | `User.read` | `GET` | `/users/{id}` | `id`, `email`, `name`, `last_name`, `phone`, `status_val`, `status`, `created_at`, `updated_at`, `deleted_at` |
 | 4 | Eliminar | `delete` | `User.delete` | `DELETE` | `/users/{id}` | — |
 
-## Relaciones
+## 🔗 Relaciones
 
 | # | Nombre | Entidad | Enlace | Cardinalidad |
 |---|--------|---------|--------|---------------|
