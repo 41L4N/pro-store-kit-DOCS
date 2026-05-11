@@ -4,14 +4,15 @@
 
 | # | Etiqueta | Campo | Reglas |
 |---|----------|-------|--------|
-| 1 | ID | `id` | Requerido. |
-| 2 | ID del usuario | `user_id` | Requerido.<br>[`User.id`](../User/User.md). |
-| 3 | Usuario | `user` | Requerido.<br>Modelo: [`User`](../User/User.md). |
-| 4 | Nombre | `name` | Requerido.<br>Texto.<br>Longitud: 1-255. |
-| 5 | Descripción | `description` | Texto.<br>Longitud: 0-4000. |
-| 6 | Fecha de creación | `created_at` | Requerido.<br>Momento (fecha/hora). |
-| 7 | Fecha de actualización | `updated_at` | Requerido.<br>Momento (fecha/hora). |
-| 8 | Fecha de eliminación | `deleted_at` | Momento (fecha/hora). |
+| 1 | ID | `id` | Requerido |
+| 2 | Archivos | `attachments` | Modelo: [`Adjunto`](../Attachment/Attachment.md)<br>Cardinalidad: `1` → `0..5`<br>Enlace:<br>(`Product.id` = [`Attachment.owner_id`](../Attachment/Attachment.md))<br>& ([`Attachment.owner_type_val`](../Attachment/Attachment.md) = [`OwnerTypeEnum.PRODUCT`](../Attachment/OwnerTypeEnum.md))<br>& (([`Attachment.type_val`](../Attachment/Attachment.md) = [`TypeEnum.COVER`](../Attachment/TypeEnum.md)) ∨ ([`Attachment.type_val`](../Attachment/Attachment.md) = [`TypeEnum.VIDEO`](../Attachment/TypeEnum.md)) ∨ ([`Attachment.type_val`](../Attachment/Attachment.md) = [`TypeEnum.IMAGE`](../Attachment/TypeEnum.md)) ∨ ([`Attachment.type_val`](../Attachment/Attachment.md) = [`TypeEnum.PDF`](../Attachment/TypeEnum.md))) |
+| 3 | ID del usuario | `user_id` | Requerido<br>Modelo: [`Usuario`](../User/User.md)<br>Cardinalidad: `N` → `1`<br>Enlace:<br>(`Product.user_id` = [`User.id`](../User/User.md)) |
+| 4 | Usuario | `user` | Requerido<br>Modelo: [`Usuario`](../User/User.md)<br>Cardinalidad: `N` → `1`<br>Enlace:<br>(`Product.user_id` = [`User.id`](../User/User.md)) |
+| 5 | Nombre | `name` | Requerido<br>Texto<br>Longitud: 1-255 |
+| 6 | Descripción | `description` | Texto<br>Longitud: 0-4000 |
+| 7 | Fecha de creación | `created_at` | Requerido<br>Momento (fecha/hora) |
+| 8 | Fecha de actualización | `updated_at` | Requerido<br>Momento (fecha/hora) |
+| 9 | Fecha de eliminación | `deleted_at` | Momento (fecha/hora) |
 
 ## ⚡ Acciones
 
@@ -21,10 +22,3 @@
 | 2 | Actualizar | `update` | `Product.update` | `PUT` | `/products/{id}` | `name`, `description` |
 | 3 | Leer | `read` | `Product.read` | `GET` | `/products/{id}` | `id`, `user_id`, `name`, `description`, `created_at`, `updated_at`, `deleted_at` |
 | 4 | Eliminar | `delete` | `Product.delete` | `DELETE` | `/products/{id}` | — |
-
-## 🔗 Relaciones
-
-| # | Nombre | Entidad | Enlace | Cardinalidad |
-|---|--------|---------|--------|---------------|
-| 1 | Usuario | [`Usuario`](../User/User.md) | `Product.user_id` → `User.id` | `N` → `1` |
-| 2 | Archivos | [`Adjunto`](../Attachment/Attachment.md) | `Product.id` → `Attachment.owner_id` | `1` → `0..5` |
