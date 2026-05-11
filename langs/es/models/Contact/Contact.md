@@ -9,7 +9,7 @@
 | 3 | Usuario | `user` | Requerido<br>Modelo: [`User`](../User/User.md) |
 | 4 | Tipo | `type_val` | Requerido<br>Enum: [`TypeEnum.value`](./TypeEnum.md) |
 | 5 | Tipo | `type` | Requerido<br>Enum: [`TypeEnum`](./TypeEnum.md) |
-| 6 | Valor | `value` | Requerido<br>Formato:<br>- type_val = [`TypeEnum.EMAIL`](TypeEnum.md): [`Email`](../../Formats.md#teléfono-phone)<br>- type_val = [`TypeEnum.PHONE`](./TypeEnum.md): [`Phone`](../../Formats.md#correo-electrónico-email) |
+| 6 | Valor | `value` | Requerido<br>Formato:<br>- type_val = [`TypeEnum.EMAIL`](./TypeEnum.md): [`Email`](../../formats.md#correo-electrónico-email)<br>- type_val = [`TypeEnum.PHONE`](./TypeEnum.md): [`Phone`](../../formats.md#teléfono-phone) |
 | 7 | Fecha de creación | `created_at` | Requerido<br>Momento (fecha/hora) |
 | 8 | Fecha de actualización | `updated_at` | Requerido<br>Momento (fecha/hora) |
 | 9 | Fecha de eliminación | `deleted_at` | Momento (fecha/hora) |

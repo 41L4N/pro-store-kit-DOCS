@@ -11,7 +11,7 @@ Referencia compartida del dominio del producto—datos, reglas y alcance—para 
 - **Módulos** del producto y su alcance funcional.
 - **Comportamientos** acordados: reglas, excepciones, casos límite y criterios de consistencia.
 
-## 🛠️ StackTecnologico
+## 🛠️ Stack tecnológico
 
 <div class="stack-logos">
 	<a href="https://vuejs.org/"><img src="https://raw.githubusercontent.com/vuejs/art/master/logo.png" alt="Vue.js" /></a>
@@ -29,6 +29,7 @@ Referencia compartida del dominio del producto—datos, reglas y alcance—para 
 - **Cliente HTTP:** Axios
 - **Internationalization:** vue-i18n
 - **Build tool:** Vite
+- **Estilos:** SASS (BEM); detalle en [convenciones](./conventions).
 
 ### Backend
 
