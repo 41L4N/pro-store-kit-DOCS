@@ -31,9 +31,17 @@ For **value shapes** (email, phone, etc.), see [formats](./formats).
 - **Views, composables, stores:** same criterion everywhere.
 - **Tests:** suffix or folder (`*.spec.ts`, `__tests__/`, etc.).
 
+## Git: branches and commits {#git-branches-and-commits}
+
+- **One branch per task:** each branch maps to **one** issue (or agreed work unit). Do not mix several tasks on one branch.
+- **Name tied to the task:** include the issue reference and a short `kebab-case` slug, e.g. `123-report-export-access` or `feat/456-stock-validation`. The number and text must make it obvious **which issue** the branch serves.
+- **PRs:** link the issue in the pull request description (`Closes #123`, `Refs #123`).
+- **Commits:** clear messages in imperative or per-repo convention (e.g. `feat:`, `fix:`); avoid vague messages like “changes”.
+
+The **environment** flow (local → dev → QA → prod), **GitHub Issues/Projects**, and short iterations are covered in [GitFlow and GitHub workflow](./gitflow).
+
 ## Other (extend as needed)
 
-- Git branches and commit messages.
 - Environment variables and prefixes.
 - Internationalisation: `i18n` keys (e.g. `module.section.key`).
 - Route names and permissions.

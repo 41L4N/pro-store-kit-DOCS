@@ -31,9 +31,17 @@ Para **forma de valores** (email, teléfono, etc.), ver [formatos](./formats).
 - **Vistas, composables, stores:** mismo criterio en todo el monorepo o app.
 - **Tests:** sufijo o carpeta (`*.spec.ts`, `__tests__/`, etc.).
 
+## Git: ramas y commits {#git-ramas-y-commits}
+
+- **Una rama por tarea:** cada rama debe corresponder a **un solo** issue (o unidad de trabajo equivalente). No mezclar varias tareas en la misma rama.
+- **Nombre alineado con la tarea:** incluir referencia al issue y un slug breve en `kebab-case`, por ejemplo `123-acceso-reportes-export` o `feat/456-validacion-stock`. El número y el texto deben dejar claro **qué issue atiende** la rama.
+- **PRs:** enlazar el issue en la descripción del pull request (`Closes #123`, `Refs #123`).
+- **Commits:** mensajes claros en imperativo o según convención del repo (p. ej. prefijo `feat:`, `fix:`); evitar commits genéricos tipo “cambios”.
+
+El flujo de **entornos** (local → dev → QA → prod), **GitHub Issues/Projects** e iteraciones cortas está descrito en [GitFlow y gestión en GitHub](./gitflow).
+
 ## Otros (ampliar según necesidad)
 
-- Ramas Git y mensajes de commit.
 - Variables de entorno y prefijos.
 - Internacionalización: claves `i18n` (p. ej. `modulo.seccion.clave`).
 - Nombres de rutas y permisos.

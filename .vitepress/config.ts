@@ -7,7 +7,7 @@ const localSearch = {
 	provider: 'local' as const,
 	options: {
 		locales: {
-			es: {
+			root: {
 				translations: {
 					button: {
 						buttonText: 'Buscar',
@@ -48,6 +48,7 @@ const localSearch = {
 const sidebarEs = [
 	{ text: 'Inicio', link: '/' },
 	{ text: 'Formatos', link: '/formats' },
+	{ text: 'GitFlow y entornos', link: '/gitflow' },
 	{ text: 'Convenciones de desarrollo', link: '/conventions' },
 	{
 		text: 'Usuario',
@@ -84,47 +85,57 @@ const sidebarEs = [
 	},
 ]
 
+/**
+ * Rutas del sidebar en inglés: deben llevar el prefijo `/en/`.
+ * Si usas rutas absolutas tipo `/formats`, VitePress las resuelve contra el locale `root` (español).
+ */
+function englishSidebarLink(path: string): string {
+	if (path === '/' || path === '') return '/en/'
+	const normalized = path.startsWith('/') ? path : `/${path}`
+	return `/en${normalized}`
+}
+
 const sidebarEn = [
-	{ text: 'Home', link: '/' },
-	{ text: 'Formats', link: '/formats' },
-	{ text: 'Development conventions', link: '/conventions' },
+	{ text: 'Home', link: englishSidebarLink('/') },
+	{ text: 'Formats', link: englishSidebarLink('/formats') },
+	{ text: 'GitFlow and environments', link: englishSidebarLink('/gitflow') },
+	{ text: 'Development conventions', link: englishSidebarLink('/conventions') },
 	{
 		text: 'User',
 		collapsed: false,
 		items: [
-			{ text: 'User', link: '/models/User/User' },
-			{ text: 'Status (Enum)', link: '/models/User/StatusEnum' },
+			{ text: 'User', link: englishSidebarLink('/models/User/User') },
+			{ text: 'Status (Enum)', link: englishSidebarLink('/models/User/StatusEnum') },
 		],
 	},
 	{
 		text: 'Contact',
 		collapsed: false,
 		items: [
-			{ text: 'Contact', link: '/models/Contact/Contact' },
-			{ text: 'Type (Enum)', link: '/models/Contact/TypeEnum' },
+			{ text: 'Contact', link: englishSidebarLink('/models/Contact/Contact') },
+			{ text: 'Type (Enum)', link: englishSidebarLink('/models/Contact/TypeEnum') },
 		],
 	},
 	{
 		text: 'Product',
 		collapsed: false,
-		items: [{ text: 'Product', link: '/models/Product/Product' }],
+		items: [{ text: 'Product', link: englishSidebarLink('/models/Product/Product') }],
 	},
 	{
 		text: 'Attachment',
 		collapsed: false,
 		items: [
-			{ text: 'Attachment', link: '/models/Attachment/Attachment' },
+			{ text: 'Attachment', link: englishSidebarLink('/models/Attachment/Attachment') },
 			{
 				text: 'Owner type (Enum)',
-				link: '/models/Attachment/OwnerTypeEnum',
+				link: englishSidebarLink('/models/Attachment/OwnerTypeEnum'),
 			},
-			{ text: 'Type (Enum)', link: '/models/Attachment/TypeEnum' },
+			{ text: 'Type (Enum)', link: englishSidebarLink('/models/Attachment/TypeEnum') },
 		],
 	},
 ]
 
 export default defineConfig({
-	// GitHub Pages (repo proyecto): https://41L4N.github.io/pro-store-kit-DOCS/
 	base: '/pro-store-kit-DOCS/',
 
 	vite: {
@@ -135,10 +146,9 @@ export default defineConfig({
 	srcExclude: ['README.md'],
 
 	locales: {
-		es: {
+		root: {
 			label: 'Español',
 			lang: 'es-ES',
-			link: '/es/',
 			title: 'Pro Store Kit',
 			description: 'Documentación de dominio y modelos',
 			themeConfig: {
