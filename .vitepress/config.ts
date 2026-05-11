@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-import { devBaseRedirectPlugin } from './dev-base-redirect'
 
 const githubRepo = 'https://github.com/41L4N/pro-store-kit-DOCS'
 
@@ -137,10 +136,6 @@ const sidebarEn = [
 
 export default defineConfig({
 	base: '/pro-store-kit-DOCS/',
-
-	vite: {
-		plugins: [devBaseRedirectPlugin()],
-	},
 
 	srcDir: 'langs',
 	srcExclude: ['README.md'],
