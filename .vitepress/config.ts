@@ -45,6 +45,9 @@ const localSearch = {
 }
 
 export default defineConfig({
+	// GitHub Pages (repo proyecto): https://41L4N.github.io/pro-store-kit-DOCS/
+	base: '/pro-store-kit-DOCS/',
+
 	srcExclude: ['README.md'],
 
 	locales: {
