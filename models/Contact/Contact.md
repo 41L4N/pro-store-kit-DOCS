@@ -13,9 +13,3 @@
 | 7 | Fecha de creación | `created_at` | Requerido<br>Momento (fecha/hora) |
 | 8 | Fecha de actualización | `updated_at` | Requerido<br>Momento (fecha/hora) |
 | 9 | Fecha de eliminación | `deleted_at` | Momento (fecha/hora) |
-
-## 🔗 Relaciones
-
-| # | Nombre | Entidad | Enlace | Cardinalidad |
-|---|--------|---------|--------|---------------|
-| 1 | Usuario | [`Usuario`](../User/User.md) | `Contact.user_id` → `User.id` | `N` → `1` |
